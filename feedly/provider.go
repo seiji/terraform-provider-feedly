@@ -20,6 +20,7 @@ func Provider() *schema.Provider {
 		},
 		DataSourcesMap: map[string]*schema.Resource{
 			"feedly_collection": dataSourceFeedlyCollection(),
+			"feedly_feed":       dataSourceFeedlyFeed(),
 			"feedly_profile":    dataSourceFeedlyProfile(),
 		},
 		ConfigureFunc: func(d *schema.ResourceData) (interface{}, error) {
