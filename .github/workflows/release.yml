@@ -3,9 +3,14 @@ on:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Tags
     branches:
       - main
+    types:
+      - completed
+  workflow_dispatch:
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
