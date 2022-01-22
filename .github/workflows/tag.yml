@@ -1,5 +1,4 @@
-name: "Tags"
-
+name: "Tag"
 on:
   workflow_run:
     workflows:
